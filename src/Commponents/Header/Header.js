@@ -3,13 +3,15 @@ import classes from './Header.module.css'
 import SearchIcon from '@mui/icons-material/Search';
 import FmdGoodOutlinedIcon from '@mui/icons-material/FmdGoodOutlined';
 import ShoppingCartOutlinedIcon from '@mui/icons-material/ShoppingCartOutlined';
+import AmazonLogo from '../../assets/amazon-logo (2).png'
 
 const Header = () => {
   return (
     <Fragment >
         <div className={classes.header}>
-            <div >
-                <img src="" alt="" />
+            <div className={classes.image} >
+               <img src={AmazonLogo}alt="" />
+               <span>.in</span>
             </div>
             <div className={classes.Adddress}>
                 <FmdGoodOutlinedIcon />
