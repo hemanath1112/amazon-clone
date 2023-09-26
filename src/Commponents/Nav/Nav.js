@@ -1,15 +1,18 @@
 import React, { Fragment } from 'react'
 import classes from './Nav.module.css'
 import MenuIcon from '@mui/icons-material/Menu';
+import { BrowserRouter as Link } from 'react-router-dom';
 
 const Nav = () => {
   return (
     <Fragment>
         <div className={classes.Navbar}>
+          <Link to="/aside">
             <div className="menu">
-                <MenuIcon />
-                <span>All</span>
-            </div>
+                  <MenuIcon />
+                  <span>All</span>
+              </div>
+          </Link>
            
             <p>Amazon miniTV</p>
             <p>sell</p>
