@@ -7,7 +7,7 @@ const Nav = () => {
   return (
     <Fragment>
         <div className={classes.Navbar}>
-          <Link to="/aside">
+          <Link to="/Login">
             <div className="menu">
                   <MenuIcon />
                   <span>All</span>
