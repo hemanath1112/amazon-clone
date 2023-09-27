@@ -4,6 +4,7 @@ import SearchIcon from '@mui/icons-material/Search';
 import FmdGoodOutlinedIcon from '@mui/icons-material/FmdGoodOutlined';
 import ShoppingCartOutlinedIcon from '@mui/icons-material/ShoppingCartOutlined';
 import AmazonLogo from '../../assets/amazon-logo (2).png'
+import {  BrowserRouter as Link} from 'react-router-dom'
 
 
 const Header = () => {
@@ -11,6 +12,7 @@ const Header = () => {
     <Fragment >
         <div className={classes.header}>
           
+         
            <div className={classes.image} >
            
                     <img src={AmazonLogo}alt="" />
@@ -35,13 +37,14 @@ const Header = () => {
             <div className={classes.language}>
                     <span>EN</span>
             </div>
-           
-                <div className={classes.sign}>
+           <Link to="/login">
+                 <div className={classes.sign}>
                     <p>Hello, sign in</p>
                     <h4>Account & List</h4>
                 </div>
        
-            
+           </Link>
+                
             <div className={classes.order}>
                 <p>Returns</p>
                 <h4>& Orders</h4>

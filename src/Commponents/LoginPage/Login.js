@@ -1,32 +1,40 @@
 import React from 'react'
 import classes from './Login.module.css'
-import Logo from '../../assets/amazon-logo (2).png'
+import Logo from '../../assets/Amazon_(company)-Logo.wine.svg'
 import ArrowRightIcon from '@mui/icons-material/ArrowRight';
+import { useState } from 'react';
 // import ArrowRightIcon from '@mui/icons-material/ArrowRight';
 
 const Login = () => {
+    const [LoginItem, setLoginItem]=useState(false)
+
   return (
-    <div>
-        <div>
+    <div className={classes.Login}>
+        <div className={classes.LoginLogo}>
             <img src={Logo} alt="Amazon logo" />
         </div>
-        <div>
+        <div className={classes.LoginDetails}>
             <h2>Sign in</h2>
-                <form action="">
+                <form action="" className={classes.LoginForm}>
                     <label htmlFor="">Email or mobile phone number</label>
                     <input type="text" />
                     <button>Continue</button>
                 </form>
-            <p>By continuing, you agree to Amazon's Conditions of <span>Use</span> and <span>Privacy Notice.</span></p>
-            <p><span><ArrowRightIcon/></span>Need help?</p>
+            <p className={classes.content}>By continuing, you agree to Amazon's <span>Conditions of  Use</span> and <span>Privacy Notice.</span></p>
+            <div className={classes.NeedMore}>
+            <span><ArrowRightIcon/></span>
+            <p >Need help?</p>
+            </div>
+     
         </div>
-        <div>
-            New to Amazon?
+        <div className={classes.LoginNew}>
+            <p>New to Amazon?</p>
+            <hr />
         </div>
-        <button>Create your Amazon account</button>
-        <div>
-            <p><span> Conditions of Use  Privacy    </span><span>Notice</span><span></span>Help</p>
-            <p>&copy; © 1996-2023, Amazon.com, Inc. or its <span>Hemanath</span></p>
+        <button className={classes.NewUserButton}>Create your Amazon account</button>
+        <div className={classes.LoginPrivacy}>
+            <p className={classes.Conditions}><span> Conditions of Use  Privacy</span><span>Notice</span><span></span>Help</p>
+            <p className={classes.CopyRights}>&copy; 1996-2023, Amazon.com, Inc. or its <span>Hemanath</span></p>
         </div>
     </div>
   )
